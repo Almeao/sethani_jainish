@@ -1259,7 +1259,8 @@ body::-webkit-scrollbar {
     /* gap: 5%; */
 }
     .swiper-slide {
-        height: 80vh;
+        height: 83vh;
+        /* max-height: 85vh; */
 
     }
 }
