@@ -35,8 +35,9 @@ var lodder = gsap.timeline();
 // Wait for full page & all assets (images, video) to load, then start loader timeline animation
 window.addEventListener('load', function() {
   // At this point, all HTML, CSS, JS & media assets are loaded
-  lodder.play(); // lodder is defined below, assumed to be initially paused
- 
+  lodder.play(); 
+  document.documentElement.style.overflowY = "visible";
+    document.body.style.overflowY = "visible";
 });
 
 
