@@ -324,7 +324,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 let mm = gsap.matchMedia();
 
-mm.add("(max-width: 480px)", () => {
+mm.add("(max-width: 768px)", () => {
 
   
 
@@ -413,7 +413,7 @@ lodder_mobail.from(".page1_containe_oil-img_right_mobail",{
 lodder_mobail.from(".page1_contain_oil-img_container_mobail img",{
   rotate:"90deg",
 
-  y:"-90%",
+  y:"-400%",
   x:200,
   scale:1.3,
   duration:1,
@@ -820,7 +820,22 @@ const page1_imagescroller_mobail = gsap.timeline({
 
 
 
+var page1_container_scroll_mobail_y = "90vh"
+var page1_container_scroll_mobail_x = "12%"
+var page1_container_scroll_mobail_scale = "2"
 
+if(window.innerWidth <= 480)
+{
+  var page1_container_scroll_mobail_y = "90vh"
+var page1_container_scroll_mobail_x = "12%"
+var page1_container_scroll_mobail_scale = "3.5"
+}
+if(window.innerWidth <= 768 && window.innerWidth > 480)
+{
+  var page1_container_scroll_mobail_y = "95vh"
+var page1_container_scroll_mobail_x = "-3%"
+var page1_container_scroll_mobail_scale = "2"
+}
 
 
 
@@ -828,11 +843,11 @@ page1_imagescroller_mobail.to(".page1_contain_oil-img_container_mobail",
 
   {
 
-  y: "90vh",
-  x: "12%",
+  y: page1_container_scroll_mobail_y,
+  x: page1_container_scroll_mobail_x,
   stagger: 0.2,
   rotate: "17deg",
-  scale:3.5,
+  scale: page1_container_scroll_mobail_scale,
   // pin:true,
  
 });
