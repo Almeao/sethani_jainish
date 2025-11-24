@@ -118,7 +118,7 @@ lodder.from(".page1_containe_oil-img_right",{
 
 lodder.from(".page1_contain_oil-img_container img",{
     rotate:"90deg",
-    y:"-100%",
+    y:"-110%",
     x:200,
     scale:1.3,
     duration:0.7,
