@@ -1695,7 +1695,7 @@ body::-webkit-scrollbar {
 
     .product_detail_right_detail {
     height: auto;
-    background-color: #00000037;
+    /* background-color: #00000037; */
     width: 29.5vw;
     display: flex;
     justify-content: center;
