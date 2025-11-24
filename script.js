@@ -118,7 +118,7 @@ lodder.from(".page1_containe_oil-img_right",{
 
 lodder.from(".page1_contain_oil-img_container img",{
     rotate:"90deg",
-    y:"-90%",
+    y:"-100%",
     x:200,
     scale:1.3,
     duration:0.7,
@@ -638,12 +638,12 @@ let page1_scroll_from_y = "108vh";
 let  page1_oil_container_scale = 1;
 
 // If the screen width is greater than 1900px, increase the scroll distance (end further away) to decrease scroll speed
-if (window.innerWidth >= 1900) {
+if (window.innerWidth >= 1900 && window.innerWidth < 2399) {
     // This makes the scroll animation span a longer distance (slower effect)
     page1_scroll_start = "top -20%";
     page1_scroll_end = "top -120%";
-    page1_scroll_from_y = "116vh";
-    page1_oil_container_scale = 0.85;
+    page1_scroll_from_y = "117vh";
+    page1_oil_container_scale = 0.9;
 }
 if (window.innerWidth >= 2400) {
     // This makes the scroll animation span a longer distance (slower effect)
