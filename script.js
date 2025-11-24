@@ -642,6 +642,13 @@ if (window.innerWidth >= 1900) {
     // This makes the scroll animation span a longer distance (slower effect)
     page1_scroll_start = "top -20%";
     page1_scroll_end = "top -120%";
+    page1_scroll_from_y = "116vh";
+    page1_oil_container_scale = 0.85;
+}
+if (window.innerWidth >= 2400) {
+    // This makes the scroll animation span a longer distance (slower effect)
+    page1_scroll_start = "top -20%";
+    page1_scroll_end = "top -120%";
     page1_scroll_from_y = "120vh";
     page1_oil_container_scale = 0.85;
 }
