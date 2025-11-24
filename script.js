@@ -36,8 +36,7 @@ var lodder = gsap.timeline();
 window.addEventListener('load', function() {
   // At this point, all HTML, CSS, JS & media assets are loaded
   lodder.play(); 
-  document.documentElement.style.overflowY = "visible";
-    document.body.style.overflowY = "visible";
+
 });
 
 
