@@ -325,8 +325,23 @@ gsap.registerPlugin(ScrollTrigger);
 let mm = gsap.matchMedia();
 
 mm.add("(max-width: 480px)", () => {
+
+  
+
+
   // It's better to create the timeline INSIDE the matchMedia function
   let lodder_mobail = gsap.timeline();
+
+
+
+// Wait for full page & all assets (images, video) to load, then start loader timeline animation
+window.addEventListener('load', function() {
+  // At this point, all HTML, CSS, JS & media assets are loaded
+  lodder_mobail.play(); // lodder is defined below, assumed to be initially paused
+ 
+});
+
+
 
   // Set initial opacity immediately (optional/failsafe, for safety)
   gsap.set(".lodder_mobail, .lodder_mobail video", {opacity: 1});
@@ -620,6 +635,7 @@ window.addEventListener('scroll', function() {
 let page1_scroll_start = "top -20%";
 let page1_scroll_end = "top -120%";
 let page1_scroll_from_y = "108vh";
+let  page1_oil_container_scale = 1;
 
 // If the screen width is greater than 1900px, increase the scroll distance (end further away) to decrease scroll speed
 if (window.innerWidth >= 1900) {
@@ -627,6 +643,7 @@ if (window.innerWidth >= 1900) {
     page1_scroll_start = "top -20%";
     page1_scroll_end = "top -120%";
     page1_scroll_from_y = "120vh";
+    page1_oil_container_scale = 0.85;
 }
 
 const page1_imagescroller = gsap.timeline({
@@ -642,10 +659,10 @@ const page1_imagescroller = gsap.timeline({
 page1_imagescroller.to(".page1_contain_oil-img_container", 
     {
         y: page1_scroll_from_y ,
-        x: "-72%",
+        x: "-73%",
         stagger: 0.2,
         rotate: "15deg",
-        scale: 1,
+        scale:  page1_oil_container_scale,
         // No pin or duration required.
     }
 );

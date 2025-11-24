@@ -861,7 +861,15 @@ body::-webkit-scrollbar {
     position: relative;
     margin-right: 20%;
 }
-
+@media screen and (min-width: 1900px) and (max-width: 2399px) 
+{
+    .panel2_left img {
+        width: 19%;
+        height: 45%;
+        position: relative;
+        margin-right: 20%;
+    }
+}
 .panel2_right {
     width: 50vw;
     height: 100vh;
@@ -1048,10 +1056,10 @@ body::-webkit-scrollbar {
 .product_detail_right_detail {
     height: auto;
     /* background-color: #00000066; */
-    /* width: 31vw; */
+    width: 31vw;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     flex-direction: column;
 }
 
@@ -1070,7 +1078,7 @@ body::-webkit-scrollbar {
     font-size: 1.40em;
     white-space: nowrap;
     font-weight: 100;
-    line-height: 0px;
+    line-height: 5px;
     font-family: 'font-1-light';
 }
 
@@ -1577,6 +1585,31 @@ body::-webkit-scrollbar {
 
 
 @media screen and (min-width: 2400px) {
+
+
+
+
+.page1_contain_2_left_img_oil {
+    /* position: absolute; */
+    width: 75%;
+    height: 85%;
+    top: 0;
+    left: 0;
+    margin-left: 3%;
+    z-index: 100;
+    /* scale: 0; */
+    /* order: 3; */
+
+    /* background-color: rgba(255, 99, 71, 0.505); */
+}
+
+.page1_contain_2_left_img_oil img {
+    width: 95%;
+    height: 100%;
+    object-fit: contain;
+    /* scale: 0; */
+
+}
     .page1_contain_2_right h3 {
         font-size: 11em;
         line-height: 150px;
@@ -1626,11 +1659,29 @@ body::-webkit-scrollbar {
 
 
 
+
     .panel1 {
         font-size: 18em;
 
     }
 
+
+    .panel2_left {
+    width: 40vw;
+    height: 100vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.panel2_left img {
+    width: 17%;
+    height: 40%;
+    position: relative;
+    margin-right: 20%;
+}
     .panel2_right h3 {
         font-size: 9em;
         letter-spacing: 2px;
@@ -1649,7 +1700,15 @@ body::-webkit-scrollbar {
         font-family: 'saira';
     }
 
-
+    .product_detail_right_detail {
+    height: auto;
+    /* background-color: #00000037; */
+    width: 29.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
     .product_detail_right h3 {
         font-size: 7.80em;
@@ -2387,7 +2446,7 @@ body::-webkit-scrollbar {
         font-size: 2em;
         line-height: 20px;
         letter-spacing: 1.8px;
-        margin-top: 2%;
+         margin-top: 2%;
 
         font-family: 'font-1';
     }
