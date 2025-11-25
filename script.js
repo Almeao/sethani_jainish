@@ -4,10 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const lenis = new Lenis();
 
-// Ensure ScrollTrigger updates on Lenis scroll
-// The original code only listens to Lenis for ScrollTrigger updates, 
-// but does not drive frame updates or actually scroll the content.
-// To fix page not scrolling, Lenis needs to be updated continuously on each animation frame.
+
 
 function raf(time) {
   lenis.raf(time);
@@ -427,171 +424,6 @@ lodder_mobail.from(".page1_contain_oil-img_container_mobail img",{
 
 
 
-// gsap.registerPlugin(ScrollTrigger);
-
-// let mm600 = gsap.matchMedia();
-
-// mm600.add("(max-width: 600px)", () => {
-//   // It's better to create the timeline INSIDE the matchMedia function
-//   let lodder_mobail_600 = gsap.timeline();
-
-//   // Set initial opacity immediately (optional/failsafe, for safety)
-//   gsap.set(".lodder_mobail, .lodder_mobail video", {opacity: 1});
-
-//   lodder_mobail_600.from(".lodder_mobail video", {
-//     opacity: 1,         // Already at 1, but if not, it'll jump to 1 instantly
-//     duration: 0,
-//     delay: 0 
-//   });
-
-//   lodder_mobail_600.to(".lodder_mobail", {
-//     duration: 0.5,
-//     // scale:0,
-//     // delay: 2, // keep video fully visible for 2 seconds
-//     opacity: 0,
-//     // ease: "power4.inOut"
-//   }, "+=2"); // keep loader visible for 2 seconds before fading out
-
-//   lodder_mobail_600.from(".nav_main_logo_mobail",{
-//     y:"-200%",
-//     scale:0.7,
-//     duration:1,
-//     ease: "power2.inOut",
-// })
-
-// lodder_mobail_600.from(".page1_bg_text_mobail",{
-//   opacity:0,
-//   scale:30,
-
-//   duration:0.5,
-//   ease: "power2.inOut",
-
-// }
-// )
-
-
-
-
-// lodder_mobail_600.to(".page1_bg_text_mobail",{
-//   lineHeight: "11vmax",
-//   duration:1,
-//   scrub:5,
-//   ease: "elastic.out(1,1)",
-// })
-
-
-
-// lodder_mobail_600.from(".page1_containe_oil-img_left_mobail",{
-//   x:"-200%",
-//   duration:1,
-//   ease: "power4.inOut",
-
-// },"page1_contain_mobail"
-// )
-
-
-
-
-// lodder_mobail_600.from(".page1_containe_oil-img_right_mobail",{
-//   x:"100%",
-//   duration:1,
-//   ease: "power4.inOut",
-
-// },"page1_contain_mobail")
-
-
-
-
-// lodder_mobail_600.from(".page1_contain_oil-img_container_mobail img",{
-//   rotate:"90deg",
-
-//   y:"-90%",
-//   x:200,
-//   scale:1.3,
-//   duration:1,
-//   ease: "power2.inOut",
-
-// },"page1_contain_mobail")
-
-
-
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// lodder.from(".page1_bg_text_mobail",{
-//     opacity:0,
-//     scale:30,
- 
-//     duration:1,
-//     ease: "power2.inOut",
-
-// }
-// )
-
-
-
-
-// lodder.to(".page1_bg_text_mobail",{
-//     lineHeight: "10vmax",
-//     duration:1,
-//     scrub:5,
-//     ease: "elastic.out(1,1)",
-// })
-
-// lodder.from(".page1_containe_oil-img_left_mobail",{
-//     x:"-100%",
-//     duration:2,
-//     ease: "power4.inOut",
-
-// },"page1_contain"
-// )
-// lodder.from(".page1_containe_oil-img_right_mobail",{
-//     x:"100%",
-//     duration:2,
-//     ease: "power4.inOut",
-
-// },"page1_contain")
-
-
-
-
-// lodder.from(".page1_contain_oil-img_container_mobail img",{
-//     rotate:"90deg",
-
-//     y:"-90%",
-//     x:200,
-//     scale:1.3,
-//     duration:1.5,
-//     ease: "power2.inOut",
-
-// },"page1_contain")
-
-
-
-
 
 //================ nav scroll animation ============================
 
@@ -974,24 +806,6 @@ gsap.from(".page1_contain_2_right p", {
 
 
 
-
-// document.querySelectorAll('.page2 h3').forEach(function(h3) {
-//     // Get the text content and trim it
-//     var text = h3.textContent;
-//     // Create a new HTML string with each character wrapped in a span
-//     var spanned = '';
-//     for (var i = 0; i < text.length; i++) {
-//         // Preserve spaces
-//         if (text[i] === ' ') {
-//             spanned += '<span>&nbsp;</span>';
-//         } else {
-//             spanned += '<span class:"page2_heading_divide">' + text[i] + '</span>';
-//         }
-//     }
-//     // Set the new HTML
-//     h3.innerHTML = spanned;
-// });
-
 gsap.from(".page2 h3",
     {
         opacity: 0,
@@ -1025,114 +839,6 @@ gsap.from(".page2 h3",
 
 
 
-
-
-
-
-
-// gsap.from(".box1",{
-//     opacity:0,
-//     x:-300,
-//     scrollTrigger:
-//     {
-//         trigger:".page2_contain",
-//         start:"top 50%",
-//         end:"top 20%",
-//         scrub:1,
-//         ease:"power4.out",
-        
-//     }
-// })
-
-
-// gsap.from(".box2",{
-//     opacity:0,
-//     y:-200,
-//     scrollTrigger:
-//     {
-//         trigger:".page2_contain",
-//         start:"top 50%",
-//         end:"top 20%",
-//         scrub:1,
-//         ease:"power4.out",
-
-//     }
-// })
-
-// gsap.from(".box3",{
-//     opacity:0,
-//     x:300,
-//     scrollTrigger:
-//     {
-//         trigger:".page2_contain",
-//         start:"top 50%",
-//         end:"top 20%",
-//         scrub:1,
-//         ease:"power4.out",
-
-//     }
-// })
-// gsap.from(".box4",{
-//     opacity:0,
-//     x:-300,
-//     delay:2,
-//     scrollTrigger:
-//     {
-//         trigger:".page2_contain",
-//         start:"top 40%",
-//         end:"top 20%",
-//         scrub:1,
-//         ease:"power4.out",
-
-//     }
-// })
-
-
-
-
-// gsap.from(".box5",{
-//     opacity:0,
-//     y:300,
-//     delay:0.7,
-//     scrollTrigger:
-//     {
-//         trigger:".page2_contain",
-//         start:"top 40%",
-//         end:"top 10%",
-//         scrub:1,
-//         ease:"power4.out",
-
-//     }
-// })
-
-// gsap.from(".box6",{
-//     opacity:0,
-//     y:300,
-//     delay:0.9,
-//     scrollTrigger:
-//     {
-//         trigger:".page2_contain",
-//         start:"top 40%",
-//         end:"top 10%",
-//         scrub:1,
-//         ease:"power4.out",
-
-//     }
-// })
-// gsap.from(".box7",{
-//     opacity:0,
-//     x:300,
-//     delay:0.9,
-//     scrollTrigger:
-//     {
-//         trigger:".page2_contain",
-//         start:"top 40%",
-//         end:"top 10%",
-//         scrub:1,
-//         ease:"power4.out",
-
-//     }
-// })
 
 
 
@@ -1307,18 +1013,6 @@ gsap.from(".product_detail_right_inner p",{
 })
 
 
-// gsap.from(".product_detail_right h6",{
-//   // y: "-50",
-//   opacity:0,
-//   scale:0.5,
-//   // stagger:0.2,
-//   scrollTrigger:{
-//     trigger:".product_detail_right",
-//     start:"top 20%",
-//     end:"top 10%",
-//     scrub:2,
-//   }
-// })
 
 
 
@@ -1328,24 +1022,6 @@ gsap.from(".product_detail_right_inner p",{
 
 
 
-
-
-
-
-
-
-// Handle resizing safely
-// let resizeTimeout;
-// window.addEventListener("resize", () => {
-//   clearTimeout(resizeTimeout);
-//   resizeTimeout = setTimeout(() => {
-//     ScrollTrigger.refresh(true);
-//     initHorizontalScroll();
-//   }, 300);
-// });
-
-// Animate the mask size on page4 as we scroll through it
-// Fix GSAP animation to trigger correctly when .page4 reaches top
 
 function initPage4MaskAnimation() {
   const page4_inner = document.querySelector('.page4_inner');
