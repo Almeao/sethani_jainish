@@ -1570,7 +1570,7 @@ body::-webkit-scrollbar {
     padding: 0 40px;
     font-family: saira;
     color: #000;
-    font-size: clamp(15px, 1.5vw, 20px);
+    font-size: clamp(13px, 1vw, 17px);
     z-index: 2;
 }
 
@@ -1826,7 +1826,7 @@ body::-webkit-scrollbar {
     padding: 0 40px;
     font-family: saira;
     color: #000;
-    font-size: clamp(25px, 2vw, 30px);
+    font-size: clamp(15px, 1.5vw, 20px);
     z-index: 2;
 }
 
@@ -5166,7 +5166,7 @@ body::-webkit-scrollbar {
     .footer-credits {
         font-weight: 400;
         line-height: 20px;
-        font-size: clamp(13px, 2.5vh, 19px);
+        font-size: clamp(6px, 1.5vh, 12px);
         padding: 0 10px;
     }
 
