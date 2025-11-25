@@ -1415,7 +1415,7 @@ window.addEventListener('load', () => {
 gsap.from(".page5 h3",
   {
       opacity: 0,
-      y: -100,
+      y: -50,
      
    
      

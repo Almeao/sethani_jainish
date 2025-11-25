@@ -1146,7 +1146,10 @@ body::-webkit-scrollbar {
     display: none;
 } */
 
-
+.page4_inner
+{
+    z-index: 500;
+}
 
 .page4_inner {
     width: 100vw;
@@ -1187,6 +1190,7 @@ body::-webkit-scrollbar {
     width: 100vw;
     height: 130vh;
     margin-top: 5%;
+    z-index: 0;
     /* margin-top: 15%; */
     /* background-color: aquamarine; */
     display: flex;
@@ -1694,7 +1698,7 @@ body::-webkit-scrollbar {
     margin-right: 20%;
 }
     .panel2_right h3 {
-        font-size: 9em;
+        /* font-size: 9em; */
         letter-spacing: 2px;
         font-weight: 500;
     }
@@ -4855,6 +4859,7 @@ body::-webkit-scrollbar {
     .page4_inner {
     width: 100vw;
     height: auto;
+
 }
 
 
