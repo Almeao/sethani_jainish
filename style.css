@@ -1186,7 +1186,7 @@ body::-webkit-scrollbar {
     position: relative;
     width: 100vw;
     height: 130vh;
-    margin-top: 10%;
+    margin-top: 5%;
     /* margin-top: 15%; */
     /* background-color: aquamarine; */
     display: flex;
@@ -1586,28 +1586,7 @@ body::-webkit-scrollbar {
     justify-self: end;
 }
 
-@media (max-width: 768px) {
-    #section-7 {
-        height: 80vh;
-    }
 
-    .footer-logo {
-        margin-top: 200px;
-    }
-
-    .footer-credits {
-        grid-template-columns: 1fr;
-        text-align: center;
-        position: static;
-        margin-top: 24px;
-    }
-
-    .credit-left,
-    .credit-center,
-    .credit-right {
-        justify-self: center;
-    }
-}
 
 
 
@@ -2622,9 +2601,9 @@ body::-webkit-scrollbar {
     .page2 h3 {
         text-align: center;
         font-family: "font-1";
-        font-size: 3em;
+        font-size: 4em;
         margin-top: 0%;
-        line-height: 50px;
+        line-height: 60px;
         color: #F8981C;
     }
 
@@ -2665,6 +2644,71 @@ body::-webkit-scrollbar {
         height: 100%;
         width: 100%;
     }
+
+
+
+    .scroller {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 2%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fef7ef;
+
+    /* background-color: #ffffff; */
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* ===== Infinite Ticker ===== */
+.ticker {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 40px 0 60px;
+}
+
+.ticker__row {
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.ticker__track {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    white-space: nowrap;
+    will-change: transform;
+    /* Reduce flicker by making animation seamless (slightly overlaps slide-out and slide-in) */
+    animation: ticker-move-seamless 40s linear infinite;
+    /* Sometimes hardware acceleration helps on certain browsers */
+    backface-visibility: hidden;
+}
+
+.ticker__row--reverse .ticker__track {
+    animation-direction: reverse;
+}
+
+/* Modified keyframes for seamless looping -- end offset is -49.9% instead of -50% */
+@keyframes ticker-move-seamless {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-49.9%);
+    }
+}
+
+
+
 
 
 
@@ -3329,11 +3373,11 @@ body::-webkit-scrollbar {
 .page4_inner {
     width: 100vw;
     height: 100vh;
-    /* background-color: aquamarine; */
-    background-image: url('Rectangle 68.png');
-    background-size: contain;
+    /* background-color: rgb(15, 255, 175); */
+    background-image: url('family_img_mobail.png');
+    background-size: cover;
     
-    background-position: right;
+    background-position: center;
     /* background: transparent; */
     /* opacity: 0.8; */
     background-repeat: no-repeat;
@@ -3344,12 +3388,13 @@ body::-webkit-scrollbar {
     mask-repeat: no-repeat;
     -webkit-mask-position: center center;
     mask-position: center center;
+    
     -webkit-mask-size: auto 460px;
     /* initial bottle height */
     mask-size: auto 460px;
     -webkit-mask-origin: content-box;
     mask-origin: content-box;
-    z-index: 200;
+    z-index: 1000;
     /* background-color: #000000; */
     /* background-color: #fff; */
 }
@@ -3376,29 +3421,25 @@ body::-webkit-scrollbar {
         position: relative;
         width: 100vw;
         height: 250vh;
-        /* margin-top: 15%; */
+        margin-top: 15%;
         /* background-color: aquamarine; */
         display: flex;
         justify-content: start;
         align-items: center;
         flex-direction: column;
+        z-index: 100;
         /* gap: 5%; */
     }
 
     .page5 h3 {
         text-align: center;
         font-family: "font-1";
-        font-size: 3em;
+        font-size: 4em;
         z-index: 1;
-        line-height: 50px;
+        line-height: 60px;
         /* margin-top: 15%; */
         color: #F8981C;
     }
-
-    .page5 h3:nth-child(1) {
-        margin-top: 10%;
-    }
-
 
 
     .swiper {
@@ -4867,7 +4908,7 @@ body::-webkit-scrollbar {
         position: relative;
         width: 100vw;
         height: 220vh;
-        /* margin-top: 15%; */
+        margin-top: 0%;
         /* background-color: aquamarine; */
         display: flex;
         justify-content: start;
@@ -4887,7 +4928,7 @@ body::-webkit-scrollbar {
     }
 
     .page5 h3:nth-child(1) {
-        margin-top: 10%;
+        margin-top: 0%;
     }
 
 
@@ -4895,7 +4936,7 @@ body::-webkit-scrollbar {
     .swiper {
         width: 100vw;
         height: 200vh;
-        margin-top: 5%;
+        margin-top: 10%;
         /* background-color: #000; */
         display: flex;
         flex-direction: column;
