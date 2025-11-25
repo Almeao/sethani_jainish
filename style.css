@@ -4912,8 +4912,8 @@ body::-webkit-scrollbar {
     .page5 {
         position: relative;
         width: 100vw;
-        height: 220vh;
-        margin-top: 0%;
+        height: 210vh;
+        margin-top: 5%;
         /* background-color: aquamarine; */
         display: flex;
         justify-content: start;
@@ -4928,12 +4928,13 @@ body::-webkit-scrollbar {
         font-size: 2em;
         z-index: 1;
         line-height: 30px;
-        /* margin-top: 15%; */
+      
         color: #F8981C;
     }
 
-    .page5 h3:nth-child(1) {
+    .page5 h3:nth-child(2) {
         margin-top: 0%;
+        margin-bottom: -5%;
     }
 
 
